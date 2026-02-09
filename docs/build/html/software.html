@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Software &mdash; Cluster Leviatán BUAP v1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=db35b069" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Hardware" href="hardware.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #003b5c" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cluster Leviatán BUAP
+              <img src="_static/image.png" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#cluster-cuetlaxcoapan">Cluster Cuetlaxcoapan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#nodos-de-calculo">Nodos de Cálculo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#infraestructura-de-gestion">Infraestructura de Gestión</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#cluster-centepetl">Cluster Centepetl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#id1">Nodos de Cálculo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#caracteristicas">Características:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#id2">Infraestructura de Gestión</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#cluster-ibm-power9">Cluster IBM Power9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#configuracion-del-cluster">Configuración del Cluster</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#cluster-huapactic">Cluster Huapáctic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#nodos-de-calculo-tradicionales">Nodos de Cálculo Tradicionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#servidores-con-gpu">Servidores con GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#cluster-leviatan">Cluster Leviatán</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#particiones-del-cluster">Particiones del Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#id3">Nodos de Cálculo Tradicionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#servidor-gpu-configuracion-1">Servidor GPU - Configuración 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#servidor-gpu-configuracion-2">Servidor GPU - Configuración 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#almacenamiento-local">Almacenamiento Local</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#redes-de-comunicacion">Redes de Comunicación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#caracteristicas-de-la-red">Características de la Red</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#almacenamiento-global">Almacenamiento Global</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#sistemas-de-almacenamiento">Sistemas de Almacenamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#detalles-por-sistema">Detalles por Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#resumen-de-capacidad-total">Resumen de Capacidad Total</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#capacidad-de-procesamiento">Capacidad de Procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#almacenamiento-total">Almacenamiento Total</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#contacto">Contacto</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Catálogo de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#software-de-desarrollo-y-simulaciones">Software de Desarrollo y Simulaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#compiladores">Compiladores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#simulacion-y-visualizacion">Simulación y Visualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#librerias-y-herramientas">Librerías y Herramientas</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #003b5c" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cluster Leviatán BUAP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Catálogo de Software</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/software.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="catalogo-de-software">
+<h1>Catálogo de Software<a class="headerlink" href="#catalogo-de-software" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si requieres una versión específica no listada aquí, por favor contacta a soporte.</p>
+</div>
+</section>
+<section id="software-de-desarrollo-y-simulaciones">
+<h1>Software de Desarrollo y Simulaciones<a class="headerlink" href="#software-de-desarrollo-y-simulaciones" title="Link to this heading"></a></h1>
+<table class="software-table floating-table docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/abinit_logo.png"><img alt="Logo Abinit" class="align-center" src="_static/abinit_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Abinit</strong></p>
+<p>Suite de software para calcular propiedades ópticas, mecánicas y vibratorias de materiales mediante DFT.</p>
+<p><em>Cálculo de moléculas, nanoestructuras y sólidos de cualquier composición.</em></p>
+<p><a class="reference external" href="https://www.abinit.org/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/anaconda_logo.png"><img alt="Logo Anaconda" class="align-center" src="_static/anaconda_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Anaconda</strong></p>
+<p>Distribución libre y abierta de los lenguajes Python y R, utilizada en ciencia de datos y aprendizaje automático.</p>
+<p><em>Procesamiento de grandes volúmenes de información, análisis predictivo y cómputos científicos.</em></p>
+<p><em>Versión Instalada: Anaconda2 / 4.1.1 Anaconda3 / 4.0.0</em></p>
+<p><a class="reference external" href="https://www.anaconda.com/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/bowtie_logo.png"><img alt="Logo Bowtie" class="align-center" src="_static/bowtie_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Bowtie</strong></p>
+<p>Alineador de lectura breve ultrarrápida y eficiente en memoria para secuencias cortas de ADN (lecturas) al genoma humano.</p>
+<p><em>Indexación basada en Burrows-Wheeler para optimizar el uso de memoria en análisis genómicos.</em></p>
+<p><em>Versión Instalada: 1 / 2, Este software se encuentra en el paquete BIO - Linux</em></p>
+<p><a class="reference external" href="http://bowtie-bio.sourceforge.net/manual.shtml">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/blast_logo.png"><img alt="Logo BLAST" class="align-center" src="_static/blast_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>BLAST (Basic Local Alignment Search Tool)</strong></p>
+<p>Encontrar regiones de similitud local entre secuencias biológicas, comparando nucleótidos o proteínas con bases de datos.</p>
+<p>Inferencia de relaciones funcionales y evolutivas, e identificación de miembros de familias de genes,</p>
+<p>mediante significancia estadística.</p>
+<p><em>Versión Instalada: 2.5.0, Este software se encuentra en el paquete BIO - Linux</em></p>
+<p><a class="reference external" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/blender_logo.png"><img alt="Logo Blender" class="align-center" src="_static/blender_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Blender</strong></p>
+<p>Software multiplataforma dedicado al modelado, iluminación, renderizado, animación y creación de gráficos 3D.</p>
+<p><em>Composición digital por nodos, edición de vídeo, escultura digital y</em>
+<em>desarrollo de videojuegos mediante motor interno.</em></p>
+<p><em>Versión Instalada: 2.74 / 2.79</em></p>
+<p><a class="reference external" href="https://docs.blender.org/manual/en/dev/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/canopy_logo.png"><img alt="Logo Canopy" class="align-center" src="_static/canopy_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Canopy</strong></p>
+<p>Entorno de análisis integrado y depurador GUI que proporciona acceso a más de 450 paquetes de Python</p>
+<p>preconstruidos y probados.</p>
+<p><em>Incluye librerías científicas y analíticas fundamentales como NumPy, SciPy, Pandas, Matplotlib e IPython.</em></p>
+<p>«Versión Instalada: 1.5.2»</p>
+<p><a class="reference external" href="http://docs.enthought.com/canopy/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/comsol_logo.png"><img alt="Logo COMSOL" class="align-center" src="_static/comsol_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>COMSOL Multiphysics</strong></p>
+<p>Software de simulación de propósito general basado en métodos numéricos avanzados para modelar diseños, dispositivos y</p>
+<p>procesos del mundo real.</p>
+<p><em>Capacidades de modelado de física única y multifísica totalmente acopladas, con herramientas para la creación y despliegue de</em></p>
+<p><em>aplicaciones de simulación.</em></p>
+<p><a class="reference external" href="https://www.comsol.com/comsol-multiphysics">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/charmm_logo.png"><img alt="Logo Charmm" class="align-center" src="_static/charmm_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>CHARMM</strong></p>
+<p>Programa de simulación molecular para sistemas de partículas múltiples con funciones de energía completas</p>
+<p>y métodos de muestreo mejorados.</p>
+<p><em>Soporte para técnicas de escala múltiple como QM/MM, MM/CG y diversos modelos de solventes implícitos.</em></p>
+<p><em>Versión Instalada: 41b2</em></p>
+<p><a class="reference external" href="https://www.charmm.org/charmm/documentation/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/cif2cell_logo.png"><img alt="Logo CIF2Cell" class="align-center" src="_static/cif2cell_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>CIF2Cell</strong></p>
+<p>Herramienta para generar configuraciones geométricas de diversos códigos de estructura electrónica a partir de archivos</p>
+<p>CIF (Crystallographic Information Framework).</p>
+<p><em>Compatible con ABINIT, Quantum Espresso, VASP y CP2K; exporta formatos .coo, .cfg y .xyz.</em></p>
+<p><em>Versión Instalada: 1.2.10</em></p>
+<p><a class="reference external" href="https://sourceforge.net/projects/cif2cell/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/corsika_logo.png"><img alt="Logo Corsika" class="align-center" src="_static/corsika_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>CORSIKA</strong></p>
+<p>Software de física especializado en la simulación de extensas lluvias de aire inducidas por rayos cósmicos de alta energía.</p>
+<p><em>Simulación detallada de interacciones de partículas en la atmósfera terrestre para astrofísica.</em></p>
+<p><em>Versión Instalada: 74005 / 74005curved / 74005th / 74100curved</em></p>
+<p><a class="reference external" href="https://www.ikp.kit.edu/corsika/70.php">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/fluka_logo.png"><img alt="Logo Fluka" class="align-center" src="_static/fluka_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>FLUKA</strong></p>
+<p>Herramienta de propósito general para cálculos de transporte de partículas e interacciones con la materia.</p>
+<p><em>Aplicaciones en diseño de aceleradores, dosimetría, física de neutrinos, radioterapia y rayos cósmicos.</em></p>
+<p><em>Versión Instalada: 2011.2c</em></p>
+<p><a class="reference external" href="http://www.fluka.org/content/manuals/online/INDEX-fluka2011.html">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/fsl_logo.png"><img alt="Logo FSL" class="align-center" src="_static/fsl_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>FSL (FMRIB Software Library)</strong></p>
+<p>Biblioteca completa de herramientas de análisis para datos de imágenes cerebrales obtenidas mediante fMRI, MRI y DTI.</p>
+<p><em>Procesamiento avanzado de imágenes médicas y herramientas de visualización neurocientífica.</em></p>
+<p><em>Versión Instalada :fsl</em></p>
+<p><a class="reference external" href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Support">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/gaussian_logo.png"><img alt="Logo Gaussian" class="align-center" src="_static/gaussian_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Gaussian</strong></p>
+<p>Paquete de software de química computacional de uso general utilizado para el modelado de estructuras y reacciones</p>
+<p>químicas.</p>
+<p><em>Cálculos de mecánica cuántica y predicción de propiedades moleculares mediante diversos métodos teóricos.</em></p>
+<p><em>Versión Instalada: 09 / 16 / 16-rev-b01 / gaussian-ib/09 _Software de pago_</em></p>
+<p><a class="reference external" href="http://gaussian.com/techsupport/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/geant4_logo.png"><img alt="Logo Geant4" class="align-center" src="_static/geant4_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Geant4</strong></p>
+<p>Conjunto de herramientas para la simulación del paso de partículas a través de la materia utilizando métodos</p>
+<p>de Monte Carlo.</p>
+<p><em>Aplicaciones en física de alta energía, nuclear, aceleradores, ciencias médicas y estudios espaciales.</em></p>
+<p><em>Versión Instalada: Geant4-10.1.0</em></p>
+<p><a class="reference external" href="https://geant4.web.cern.ch/support/user_documentation">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/gulp_logo.png"><img alt="Logo Gulp" class="align-center" src="_static/gulp_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>GULP (General Utility Lattice Program)</strong></p>
+<p>Programa para realizar simulaciones en materiales utilizando condiciones de contorno de 0-D a 3-D.</p>
+<p><em>Modelado de moléculas, clústeres, polímeros, superficies y sólidos periódicos.</em></p>
+<p><em>Versión Instalada: 4.3</em></p>
+<p><a class="reference external" href="http://gulp.curtin.edu.au/gulp/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/hawc2_logo.png"><img alt="Logo Hawc2" class="align-center" src="_static/hawc2_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>HAWC2</strong></p>
+<p>Código aeroelástico avanzado destinado a calcular la respuesta de turbinas eólicas en el dominio del tiempo.</p>
+<p><em>Análisis estructural y aerodinámico para el diseño y optimización de sistemas de energía eólica.</em></p>
+<p><em>Versión Instalada: ape-hawc-2.01.01</em></p>
+<p><a class="reference external" href="http://www.hawc2.dk/download/hawc2-manual">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/ibsimu_logo.png"><img alt="Logo Ibsimu" class="align-center" src="_static/ibsimu_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Ibsimu (Ion Beam Simulator)</strong></p>
+<p>Biblioteca para la simulación de óptica de iones, extracción de plasma y transporte de haces con carga espacial.</p>
+<p><em>Cálculo de trayectorias en campos electromagnéticos e iteración de Vlasov para simulaciones auto-consistentes.</em></p>
+<p><em>Versión Instalada: 1.0.6</em></p>
+<p><a class="reference external" href="https://sourceforge.net/projects/ibsimu/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/julia_logo.png"><img alt="Logo Julia" class="align-center" src="_static/julia_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Julia</strong></p>
+<p>Lenguaje moderno de alto rendimiento diseñado para la informática científica, ciencia de datos y aprendizaje automático.</p>
+<p><em>Combina la facilidad de Python con la velocidad de C++, ofreciendo capacidades de cómputo distribuido y paralelo.</em></p>
+<p><em>Versión Instalada: 0.3.11 / 0.4.2 / 0.4.6</em></p>
+<p><a class="reference external" href="https://docs.julialang.org/en/v1/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/lammps_logo.png"><img alt="Logo Lammps" class="align-center" src="_static/lammps_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)</strong></p>
+<p>Código de dinámica molecular clásico centrado en el modelado de materiales a escala atómica o mesoscópica.</p>
+<p><em>Simulaciones en paralelo para metales, semiconductores, biomoléculas, polímeros y sistemas de grano grueso.</em></p>
+<p><em>Versión Instalada 16_Mar_2018</em></p>
+<p><a class="reference external" href="https://lammps.sandia.gov/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/matlab_logo.png"><img alt="Logo Matlab" class="align-center" src="_static/matlab_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>MATLAB</strong></p>
+<p>Entorno de programación y análisis numérico diseñado para el cálculo iterativo, procesos de simulación</p>
+<p>y diseño científico.</p>
+<p><em>Lenguaje basado en matrices que permite la implementación de matemáticas avanzadas para la resolución</em></p>
+<p><em>de problemas complejos.</em></p>
+<p><a class="reference external" href="https://la.mathworks.com/products/matlab/getting-started.html">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/maxima_logo.png"><img alt="Logo Maxima" class="align-center" src="_static/maxima_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Maxima</strong></p>
+<p>Sistema para la manipulación de expresiones simbólicas y numéricas, incluyendo álgebra, cálculo y</p>
+<p>ecuaciones diferenciales.</p>
+<p><em>Producción de resultados de alta precisión con fracciones exactas y soporte para graficación en dos y tres dimensiones.</em></p>
+<p><em>Versión Instalada: 5.41.0</em></p>
+<p><a class="reference external" href="http://maxima.sourceforge.net/es/documentation.html">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/mrbayes_logo.png"><img alt="Logo MrBayes" class="align-center" src="_static/mrbayes_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>MrBayes</strong></p>
+<p>Programa de inferencia bayesiana para la elección de modelos en una amplia gama de estructuras filogenéticas y</p>
+<p>evolutivas.</p>
+<p><em>Utiliza métodos de cadena de Markov Monte Carlo para estimar la distribución posterior de parámetros.</em></p>
+<p><em>Versión Instalada: 3.2.6</em></p>
+<p><a class="reference external" href="http://mrbayes.sourceforge.net/manual.php">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/mrtrix3_logo.png"><img alt="Logo MRtrix3" class="align-center" src="_static/mrtrix3_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>MRtrix3</strong></p>
+<p>Conjunto de herramientas para el análisis de MRI de difusión, desde tractografía hasta análisis de nivel de grupo.</p>
+<p><em>Diseñado para alto rendimiento y estabilidad en el procesamiento de imágenes médicas de resonancia magnética.</em></p>
+<p><em>Versión Instalada: mrtrix3</em></p>
+<p><a class="reference external" href="https://mrtrix.readthedocs.io/en/latest/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/namd_logo.png"><img alt="Logo NAMD" class="align-center" src="_static/namd_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>NAMD</strong></p>
+<p>Código paralelo de dinámica molecular diseñado para la simulación de alto rendimiento de grandes sistemas biomoleculares.</p>
+<p><em>Optimizado para el modelado eficiente de estructuras biológicas complejas en entornos de computación paralela.</em></p>
+<p><em>Versión Instalada: 2.1</em></p>
+<p><a class="reference external" href="https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/namd/">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/nwchem_logo.png"><img alt="Logo Nwchem" class="align-center" src="_static/nwchem_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>NWChem</strong></p>
+<p>Herramientas de química computacional escalables para tratar problemas científicos de gran escala en recursos paralelos.</p>
+<p><em>Capacidad eficiente para supercomputadores de alto rendimiento y clusters convencionales de estaciones de trabajo.</em></p>
+<p><em>Versión Instalada: 6.5 / 6.8</em></p>
+<p><a class="reference external" href="http://www.nwchem-sw.org/index.php/Release66:NWChem_Documentation">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/octopus_logo.png"><img alt="Logo Octopus" class="align-center" src="_static/octopus_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Octopus</strong></p>
+<p>Programa científico destinado a la experimentación virtual ab initio en una gama diversa de sistemas.</p>
+<p><em>Paralelización mediante MPI y OpenMP con soporte para aceleración por GPU a través de OpenCL y CUDA.</em></p>
+<p><em>Versión Instalada: 6.0</em></p>
+<p><a class="reference external" href="http://octopus-code.org/wiki/Documentation">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/openmx_logo.png"><img alt="Logo OpenMx" class="align-center" src="_static/openmx_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>OpenMX</strong></p>
+<p>Paquete de software para simulaciones de materiales a escala nanométrica basadas en teorías de función de densidad.</p>
+<p><em>Uso de pseudopotenciales de conservación de normas y funciones básicas pseudoatómicas localizadas.</em></p>
+<p><em>Versión Instalada: 3.7.1</em></p>
+<p><a class="reference external" href="http://www.openmx-square.org/tech_notes/tech_notes.html">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/orca_logo.png"><img alt="Logo ORCA" class="align-center" src="_static/orca_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>ORCA</strong></p>
+<p>Paquete de química cuántica ab initio que contiene métodos modernos de estructura electrónico para moléculas grandes</p>
+<p>y complejos de metales.</p>
+<p><a href="#id27"><span class="problematic" id="id28">*</span></a>Incluye teoría funcional de densidad, perturbación de muchos cuerpos y métodos multirreferencia para el estudio de</p>
+<p>propiedades espectroscópicas.*</p>
+<p><em>Versión Instalada: 3.0.3 / 4.0.1</em></p>
+<p><a class="reference external" href="https://orcaforum.cec.mpg.de/viewtopic.php?f=20&amp;t=3120">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/quantum_espresso_logo.png"><img alt="Logo Quantum Espresso" class="align-center" src="_static/quantum_espresso_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Quantum ESPRESSO</strong></p>
+<p>Conjunto integrado de códigos de código abierto para cálculos de estructura electrónica y modelado de materiales a</p>
+<p>nanoescala.</p>
+<p><em>Basado en la teoría de densidad funcional, ondas planas y pseudopotenciales para investigación científica.</em></p>
+<p><em>Versión Instalada: 5.1.2 / 6.1</em></p>
+<p><a class="reference external" href="https://www.quantum-espresso.org/resources/users-manual">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/root_logo.png"><img alt="Logo ROOT" class="align-center" src="_static/root_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>ROOT</strong></p>
+<p>Framework de software científico modular diseñado para el procesamiento de big data, análisis estadístico y visualización.</p>
+<p><em>Desarrollado en C++ con integración para Python y R, optimizado para el almacenamiento masivo de datos científicos.</em></p>
+<p><em>Versión Instalada: root-5.34.26 / root-6.10.08</em></p>
+<p><a class="reference external" href="https://root.cern.ch/documentation">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/siesta_logo.png"><img alt="Logo SIESTA" class="align-center" src="_static/siesta_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>SIESTA</strong></p>
+<p>Software para realizar cálculos de estructura electrónica eficientes y simulaciones dinámicas moleculares ab initio de</p>
+<p>moléculas y sólidos.</p>
+<p><em>Implementación de algoritmos de escala lineal con conjuntos de bases localizados para ajustar precisión y costo computacional.</em></p>
+<p><em>Versión Instalada: 4.1-b1</em></p>
+<p><a class="reference external" href="https://departments.icmab.es/leem/siesta/Documentation/index.html">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/trinity_logo.png"><img alt="Logo Trinity" class="align-center" src="_static/trinity_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Trinity RNA-Seq</strong></p>
+<p>Método para la reconstrucción de novo de transcriptomas a partir de datos de secuenciación de ARN.</p>
+<p><em>Combina los módulos independientes Inchworm, Chrysalis y Butterfly para procesar grandes volúmenes de lecturas.</em></p>
+<p><em>Versión Instalada: 2.1 / 2.2 Este software se encuentra en el paquete BIO - Linux</em></p>
+<p><a class="reference external" href="https://github.com/trinityrnaseq/trinityrnaseq/wiki">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/topas_logo.png"><img alt="Logo TOPAS" class="align-center" src="_static/topas_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>TOPAS</strong></p>
+<p>Software de análisis de perfiles y estructuras que integra técnicas de ajuste de perfil para datos de difracción de rayos X.</p>
+<p><em>Capacidades para indexación, refinamiento Rietveld y determinación de estructuras desde el inicio en datos de polvo y monocristal.</em></p>
+<p><em>Versión Instalada: topas2 / topas2exts</em></p>
+<p><a class="reference external" href="https://www.bruker.com/es/products/x-ray-diffraction-and-elemental-analysis.html">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/vmatch_logo.png"><img alt="Logo Vmatch" class="align-center" src="_static/vmatch_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>Vmatch</strong></p>
+<p>Herramienta versátil para resolver tareas de coincidencia de secuencias biológicas a gran escala con alta eficiencia.</p>
+<p><em>Interfaz flexible con requisitos optimizados de espacio y tiempo para el análisis masivo de secuencias genómicas.</em></p>
+<p><em>Versión Instalada: 2.3</em></p>
+<p><a class="reference external" href="http://www.vmatch.de/virtman.pdf">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/wrf_logo.png"><img alt="Logo WRF" class="align-center" src="_static/wrf_logo.png" style="width: 120px;" />
+</a>
+</td>
+<td><p><strong>WRF (Weather Research and Forecasting)</strong></p>
+<p>Modelo numérico de predicción meteorológica de escala regional diseñado para investigación atmosférica y pronóstico</p>
+<p>operativo.</p>
+<p><em>Sistema de modelado de mesoescala altamente paralelo para simular condiciones climáticas y fenómenos atmosféricos.</em></p>
+<p><em>Versión Instalada: 3.9.1</em></p>
+<p><a class="reference external" href="https://www.mmm.ucar.edu/weather-research-and-forecasting-model">Sitio Oficial de Documentación</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="compiladores">
+<h1>Compiladores<a class="headerlink" href="#compiladores" title="Link to this heading"></a></h1>
+<table class="software-table floating-table docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/gcc_logo.png"><img alt="Logo GCC" class="align-center" src="_static/gcc_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>GCC (GNU Compiler Collection)</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sistema de compiladores que soporta lenguajes como C, C++, Fortran y Go.</p>
+</dd>
+<dt class="field-even">Versiones disponibles<span class="colon">:</span></dt>
+<dd class="field-even"><p>7.x, 8.x, 9.x, 10.x, 11.x</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/intel_logo.png"><img alt="Logo Intel Parallel Studio" class="align-center" src="_static/intel_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>Intel Parallel Studio XE / oneAPI</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Herramientas optimizadas para procesadores Intel que facilitan la creación de aplicaciones paralelas y vectorización.</p>
+</dd>
+<dt class="field-even">Versiones<span class="colon">:</span></dt>
+<dd class="field-even"><p>2023.1.0, 2024.0.0</p>
+</dd>
+<dt class="field-odd">Librerías incluidas<span class="colon">:</span></dt>
+<dd class="field-odd"><p>IPP, IPPCP, MKL.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/cmake_logo.png"><img alt="Logo CMake" class="align-center" src="_static/cmake_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>CMake</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Herramienta multiplataforma para controlar el proceso de compilación mediante archivos de configuración independientes.</p>
+</dd>
+<dt class="field-even">Versión Instalada<span class="colon">:</span></dt>
+<dd class="field-even"><p>3.24.2</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/redhat_logo.png"><img alt="Logo Developer Toolset" class="align-center" src="_static/redhat_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>Developer Toolset (GCC)</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Versiones actualizadas de compiladores GNU y herramientas de depuración para plataformas CentOS y Red Hat.</p>
+</dd>
+<dt class="field-even">Versión Instalada<span class="colon">:</span></dt>
+<dd class="field-even"><p>4</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/java_logo.png"><img alt="Logo Oracle JDK" class="align-center" src="_static/java_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>Oracle JDK</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Kit de desarrollo para la creación y ejecución de aplicaciones basadas en el lenguaje Java.</p>
+</dd>
+<dt class="field-even">Versión Instalada<span class="colon">:</span></dt>
+<dd class="field-even"><p>jdk1.8.0_102</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/pgi_logo.png"><img alt="Logo PGI CDK" class="align-center" src="_static/pgi_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>PGI CDK</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Compiladores de alto rendimiento con soporte para OpenACC y CUDA Fortran en sistemas con GPU.</p>
+</dd>
+<dt class="field-even">Versión Instalada<span class="colon">:</span></dt>
+<dd class="field-even"><p>15.4</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/python_logo.png"><img alt="Logo Python" class="align-center" src="_static/python_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>Python</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Lenguaje interpretado ideal para cómputo científico y scripting de alto nivel.</p>
+</dd>
+<dt class="field-even">Versión Instalada<span class="colon">:</span></dt>
+<dd class="field-even"><p>3.9.21</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="simulacion-y-visualizacion">
+<h1>Simulación y Visualización<a class="headerlink" href="#simulacion-y-visualizacion" title="Link to this heading"></a></h1>
+<table class="software-table floating-table docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/quantum_espresso_logo.png"><img alt="Logo Quantum ESPRESSO" class="align-center" src="_static/quantum_espresso_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>Quantum ESPRESSO</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Suite de código abierto para cálculos de estructura electrónica y modelado de materiales a nanoescala (DFT).</p>
+</dd>
+<dt class="field-even">Método<span class="colon">:</span></dt>
+<dd class="field-even"><p>Ondas planas y pseudopotenciales.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal image-reference" href="_static/vmd_logo.png"><img alt="Logo VMD" class="align-center" src="_static/vmd_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>VMD (Visual Molecular Dynamics)</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Programa de visualización y análisis de trayectorias de dinámica molecular.</p>
+</dd>
+<dt class="field-even">Aplicaciones<span class="colon">:</span></dt>
+<dd class="field-even"><p>Análisis estructural y representaciones gráficas avanzadas.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/blender_logo.png"><img alt="Logo Blender" class="align-center" src="_static/blender_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>Blender</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Software de modelado, iluminación y renderizado 3D.</p>
+</dd>
+<dt class="field-even">Capacidades<span class="colon">:</span></dt>
+<dd class="field-even"><p>Composición por nodos, escultura digital y edición de vídeo.</p>
+</dd>
+<dt class="field-odd">Documentación<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.blender.org/manual/en/dev/">Manual de Blender</a></p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="librerias-y-herramientas">
+<h1>Librerías y Herramientas<a class="headerlink" href="#librerias-y-herramientas" title="Link to this heading"></a></h1>
+<table class="software-table floating-table docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_static/openmpi_logo.png"><img alt="Logo OpenMPI" class="align-center" src="_static/openmpi_logo.png" style="width: 100%;" />
+</a>
+</td>
+<td><p><strong>OpenMPI</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Descripción<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Biblioteca de paso de mensajes (MPI) de alto rendimiento para computación paralela.</p>
+</dd>
+<dt class="field-even">Implementación<span class="colon">:</span></dt>
+<dd class="field-even"><p>Compatible con el estándar MPI-3.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="admonition seealso">
+<p class="admonition-title">Ver también</p>
+<p>Para solicitar la instalación de nuevo software, consulte la sección de <span class="xref std std-doc">contacto</span> o envíe un ticket a soporte.</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="hardware.html" class="btn btn-neutral float-left" title="Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Laboratorio Nacional de Supercómputo del Sureste de México.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

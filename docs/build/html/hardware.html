@@ -1,0 +1,852 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardware &mdash; Cluster Leviatán BUAP v1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=db35b069" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Catálogo de Software" href="software.html" />
+    <link rel="prev" title="Catálogo del Laboratorio Nacional de Supercómputo del Sureste de México" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #003b5c" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cluster Leviatán BUAP
+              <img src="_static/image.png" class="logo" alt="Logotipo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-cuetlaxcoapan">Cluster Cuetlaxcoapan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nodos-de-calculo">Nodos de Cálculo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#infraestructura-de-gestion">Infraestructura de Gestión</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-centepetl">Cluster Centepetl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Nodos de Cálculo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#caracteristicas">Características:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Infraestructura de Gestión</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-ibm-power9">Cluster IBM Power9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuracion-del-cluster">Configuración del Cluster</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-huapactic">Cluster Huapáctic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nodos-de-calculo-tradicionales">Nodos de Cálculo Tradicionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#servidores-con-gpu">Servidores con GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cluster-leviatan">Cluster Leviatán</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#particiones-del-cluster">Particiones del Cluster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Nodos de Cálculo Tradicionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#servidor-gpu-configuracion-1">Servidor GPU - Configuración 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#servidor-gpu-configuracion-2">Servidor GPU - Configuración 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#almacenamiento-local">Almacenamiento Local</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#redes-de-comunicacion">Redes de Comunicación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caracteristicas-de-la-red">Características de la Red</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#almacenamiento-global">Almacenamiento Global</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sistemas-de-almacenamiento">Sistemas de Almacenamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detalles-por-sistema">Detalles por Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resumen-de-capacidad-total">Resumen de Capacidad Total</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#capacidad-de-procesamiento">Capacidad de Procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#almacenamiento-total">Almacenamiento Total</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contacto">Contacto</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Catálogo de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html#software-de-desarrollo-y-simulaciones">Software de Desarrollo y Simulaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html#compiladores">Compiladores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html#simulacion-y-visualizacion">Simulación y Visualización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html#librerias-y-herramientas">Librerías y Herramientas</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #003b5c" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cluster Leviatán BUAP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Hardware</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/hardware.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hardware">
+<h1>Hardware<a class="headerlink" href="#hardware" title="Link to this heading"></a></h1>
+<p>El Laboratorio Nacional de Supercómputo del Sureste de México (LNS) cuenta con varios segmentos de cómputo científico de alto rendimiento.</p>
+<hr class="docutils" />
+<section id="cluster-cuetlaxcoapan">
+<h2>Cluster Cuetlaxcoapan<a class="headerlink" href="#cluster-cuetlaxcoapan" title="Link to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Total de Núcleos<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2,952 núcleos de procesamiento</p>
+</dd>
+<dt class="field-even">Almacenamiento<span class="colon">:</span></dt>
+<dd class="field-even"><p>240 TB de espacio total</p>
+</dd>
+<dt class="field-odd">Red<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Infiniband 56 Gbps (punto a punto)</p>
+</dd>
+</dl>
+<section id="nodos-de-calculo">
+<h3>Nodos de Cálculo<a class="headerlink" href="#nodos-de-calculo" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo</p></th>
+<th class="head"><p>Cantidad</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>RAM</p></th>
+<th class="head"><p>Núcleos Totales</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Thin</strong></p></td>
+<td><p>83</p></td>
+<td><p>2 × Intel Xeon (12 cores)</p></td>
+<td><p>128 GB</p></td>
+<td><p>1,992</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Semi Fat</strong></p></td>
+<td><p>40</p></td>
+<td><p>2 × Intel Xeon (12 cores)</p></td>
+<td><p>256 GB</p></td>
+<td><p>960</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="infraestructura-de-gestion">
+<h3>Infraestructura de Gestión<a class="headerlink" href="#infraestructura-de-gestion" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>3 servidores de gestión:</strong></p>
+<ul>
+<li><p>Servidor de login</p></li>
+<li><p>Servidor de colas</p></li>
+<li><p>Servidor de aprovisionamiento</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cluster-centepetl">
+<h2>Cluster Centepetl<a class="headerlink" href="#cluster-centepetl" title="Link to this heading"></a></h2>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Arquitectura<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Intel Xeon Phi Knights Landing</p>
+</dd>
+<dt class="field-even">Total de Núcleos<span class="colon">:</span></dt>
+<dd class="field-even"><p>3,060 núcleos de procesamiento</p>
+</dd>
+<dt class="field-odd">Rendimiento<span class="colon">:</span></dt>
+<dd class="field-odd"><p>135 TFlops</p>
+</dd>
+<dt class="field-even">Almacenamiento<span class="colon">:</span></dt>
+<dd class="field-even"><p>480 TB</p>
+</dd>
+<dt class="field-odd">Red de Procesamiento<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Intel Omnipath a100 Gbps</p>
+</dd>
+</dl>
+<section id="id1">
+<h3>Nodos de Cálculo<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cantidad</p></th>
+<th class="head"><p>CPU</p></th>
+<th class="head"><p>RAM por Nodo</p></th>
+<th class="head"><p>Total Núcleos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>45 nodos</strong></p></td>
+<td><p>Intel Xeon Phi Knights Landing (68 cores)</p></td>
+<td><p>192 GB + 16 GB (208 GB)</p></td>
+<td><p>3,060</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="caracteristicas">
+<h3>Características:<a class="headerlink" href="#caracteristicas" title="Link to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Memoria de Alta Velocidad<span class="colon">:</span></dt>
+<dd class="field-odd"><p>16 GB MCDRAM por nodo</p>
+</dd>
+<dt class="field-even">Red de Administración<span class="colon">:</span></dt>
+<dd class="field-even"><p>Ethernet Gigabit</p>
+</dd>
+<dt class="field-odd">Red de Procesamiento<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Intel Omnipath 100 Gbps</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Infraestructura de Gestión<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>2 servidores de gestión:</strong></p>
+<ul>
+<li><p>Servidor de login</p></li>
+<li><p>Servidor de aprovisionamiento</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cluster-ibm-power9">
+<h2>Cluster IBM Power9<a class="headerlink" href="#cluster-ibm-power9" title="Link to this heading"></a></h2>
+<p>Organizado en dos segmentos de 3 equipos cada uno.</p>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Componente</p></th>
+<th class="head"><p>Especificación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Modelo</strong></p></td>
+<td><p>IBM AC922 Power9</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Procesadores</strong></p></td>
+<td><p>2 × Power9 de 20 cores</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Memoria RAM</strong></p></td>
+<td><p>1,024 GB (1 TB)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Almacenamiento</strong></p></td>
+<td><p>2 × SSD SATA de 1.9 TB</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GPUs</strong></p></td>
+<td><p>4 × NVIDIA Volta V100 SXM2 con NVLINK</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Procesamiento Tensorial</strong></p></td>
+<td><p>125 TF Tensor Core para IA (por tarjeta)</p></td>
+</tr>
+</tbody>
+</table>
+<section id="configuracion-del-cluster">
+<h3>Configuración del Cluster<a class="headerlink" href="#configuracion-del-cluster" title="Link to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Total de Servidores<span class="colon">:</span></dt>
+<dd class="field-odd"><p>6 servidores IBM AC922</p>
+</dd>
+<dt class="field-even">Total de GPUs<span class="colon">:</span></dt>
+<dd class="field-even"><p>24 NVIDIA Volta V100</p>
+</dd>
+<dt class="field-odd">Rendimiento IA<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3 PetaFlops (FP16)</p>
+</dd>
+<dt class="field-even">Conexión<span class="colon">:</span></dt>
+<dd class="field-even"><p>Incorporado al Storage Distribuido</p>
+</dd>
+</dl>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cluster-huapactic">
+<h2>Cluster Huapáctic<a class="headerlink" href="#cluster-huapactic" title="Link to this heading"></a></h2>
+<p>Cluster híbrido con nodos de cálculo y servidores especializados con GPU.</p>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Sistema Operativo<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Rocky Linux 8.7 (Green Obsidian)</p>
+</dd>
+<dt class="field-even">Total de Núcleos CPU<span class="colon">:</span></dt>
+<dd class="field-even"><p>2,112 núcleos de procesamiento</p>
+</dd>
+<dt class="field-odd">Total de GPUs<span class="colon">:</span></dt>
+<dd class="field-odd"><p>16 NVIDIA Ampere A100</p>
+</dd>
+</dl>
+<section id="nodos-de-calculo-tradicionales">
+<h3>Nodos de Cálculo Tradicionales<a class="headerlink" href="#nodos-de-calculo-tradicionales" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo</p></th>
+<th class="head"><p>Cantidad</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>RAM</p></th>
+<th class="head"><p>Núcleos Totales</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Thin</strong></p></td>
+<td><p>84</p></td>
+<td><p>2 × Intel (12 cores)</p></td>
+<td><p>128 GB</p></td>
+<td><p>2,016</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Fat</strong></p></td>
+<td><p>2</p></td>
+<td><p>2 × Intel (12 cores)</p></td>
+<td><p>256 GB</p></td>
+<td><p>48</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="servidores-con-gpu">
+<h3>Servidores con GPU<a class="headerlink" href="#servidores-con-gpu" title="Link to this heading"></a></h3>
+<p><strong>4 Servidores Lenovo SR-670</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Componente</p></th>
+<th class="head"><p>Especificación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Procesadores</strong></p></td>
+<td><p>2 × Intel Xeon Gold 6342 (24 cores &#64; 2.8 GHz)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Memoria RAM</strong></p></td>
+<td><p>1,024 GB (1 TB)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Almacenamiento NVMe</strong></p></td>
+<td><p>4 × NVMe PCIe 3.0 U.2 de 7.689 TB</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sistema Operativo</strong></p></td>
+<td><p>2 × U.2 NVMe PCIe 4.0 de 1.6 TB (RAID 1)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GPUs</strong></p></td>
+<td><p>4 × NVIDIA Ampere A100 SXM4 (80 GB RAM c/u)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Procesamiento Tensorial</strong></p></td>
+<td><p>312 TF (FP32) | 624 TF (FP16) por tarjeta</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Interconexión GPU</strong></p></td>
+<td><p>NVLINK</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Conexión<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Incorporados al Storage Distribuido</p>
+</dd>
+</dl>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cluster-leviatan">
+<h2>Cluster Leviatán<a class="headerlink" href="#cluster-leviatan" title="Link to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">CPU<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Intel(R) Xeon(R) E5-2680 v3 &#64; 2.50GHz
+- 24 hilos de procesamiento
+- Arquitectura Haswell</p>
+</dd>
+<dt class="field-even">Memoria RAM<span class="colon">:</span></dt>
+<dd class="field-even"><p>125 GiB</p>
+</dd>
+<dt class="field-odd">Interfaz de Red<span class="colon">:</span></dt>
+<dd class="field-odd"><p>InfiniBand Mellanox ConnectX-3</p>
+</dd>
+<dt class="field-even">Sistema Operativo<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rocky Linux 9.6
+- Distribución empresarial compatible con RHEL
+- Optimizado para HPC</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="particiones-del-cluster">
+<h2>Particiones del Cluster<a class="headerlink" href="#particiones-del-cluster" title="Link to this heading"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 10.0%" />
+<col style="width: 45.0%" />
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Partición</p></th>
+<th class="head"><p>Nodos</p></th>
+<th class="head"><p>Descripción</p></th>
+<th class="head"><p>Características</p></th>
+<th class="head"><p>Estado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>normal</strong></p></td>
+<td><p>35</p></td>
+<td><p>Cómputo general de propósito múltiple</p></td>
+<td><p>Nodos C01-C38</p></td>
+<td><p>Activo</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>fatcpu</strong></p></td>
+<td><p>40</p></td>
+<td><p>Procesamiento con alta demanda de memoria</p></td>
+<td><p>RAM extendida</p></td>
+<td><p>Activo</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>gpu</strong></p></td>
+<td><p>2</p></td>
+<td><p>Cómputo acelerado por GPU</p></td>
+<td><p>Ampere/L402</p></td>
+<td><p>Activo</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<section id="id3">
+<h3>Nodos de Cálculo Tradicionales<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cantidad</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>RAM</p></th>
+<th class="head"><p>Núcleos Totales</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>40 nodos Thin</strong></p></td>
+<td><p>2 × Intel (12 cores)</p></td>
+<td><p>128 GB</p></td>
+<td><p>960</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="servidor-gpu-configuracion-1">
+<h3>Servidor GPU - Configuración 1<a class="headerlink" href="#servidor-gpu-configuracion-1" title="Link to this heading"></a></h3>
+<p><strong>1 Servidor Lenovo SR-670</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Componente</p></th>
+<th class="head"><p>Especificación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Procesadores</strong></p></td>
+<td><p>2 × Intel Xeon Gold 6342 (24 cores &#64; 2.8 GHz)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Memoria RAM</strong></p></td>
+<td><p>1,024 GB (1 TB)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Almacenamiento NVMe</strong></p></td>
+<td><p>4 × NVMe PCIe 3.0 U.2 de 7.689 TB</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sistema Operativo</strong></p></td>
+<td><p>2 × U.2 NVMe PCIe 4.0 de 1.6 TB (RAID 1)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>GPUs</strong></p></td>
+<td><p>4 × NVIDIA Ampere A100 SXM4 (80 GB RAM c/u)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Procesamiento Tensorial</strong></p></td>
+<td><p>312 TF (FP32) | 624 TF (FP16) por tarjeta</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Interconexión GPU</strong></p></td>
+<td><p>NVLINK</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="servidor-gpu-configuracion-2">
+<h3>Servidor GPU - Configuración 2<a class="headerlink" href="#servidor-gpu-configuracion-2" title="Link to this heading"></a></h3>
+<p><strong>1 Servidor Lenovo SR-670v2</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Componente</p></th>
+<th class="head"><p>Especificación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Procesadores</strong></p></td>
+<td><p>2 × Intel Xeon Gold 6342 (24 cores &#64; 2.8 GHz)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Memoria RAM</strong></p></td>
+<td><p>1,024 GB (1 TB)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sistema Operativo</strong></p></td>
+<td><p>2 × U.2 NVMe PCIe 4.0 de 1 TB (RAID 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>GPUs</strong></p></td>
+<td><p>8 × NVIDIA Ampere L40</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Procesamiento Tensorial</strong></p></td>
+<td><p>312 TF (FP32) | 624 TF (FP16) por tarjeta</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Conexión<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Incorporados al Storage Distribuido</p>
+</dd>
+</dl>
+</section>
+<section id="almacenamiento-local">
+<h3>Almacenamiento Local<a class="headerlink" href="#almacenamiento-local" title="Link to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Sistema NVMe<span class="colon">:</span></dt>
+<dd class="field-odd"><p>All Flash NVMe de 110 TB útiles</p>
+</dd>
+<dt class="field-even">Tipo<span class="colon">:</span></dt>
+<dd class="field-even"><p>Almacenamiento de alto rendimiento</p>
+</dd>
+<dt class="field-odd">Uso<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Datos temporales y procesamiento intensivo de E/S</p>
+</dd>
+</dl>
+</section>
+</section>
+<hr class="docutils" />
+<section id="redes-de-comunicacion">
+<h2>Redes de Comunicación<a class="headerlink" href="#redes-de-comunicacion" title="Link to this heading"></a></h2>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Red</p></th>
+<th class="head"><p>Velocidad</p></th>
+<th class="head"><p>Uso</p></th>
+<th class="head"><p>Clusters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Ethernet Gigabit</strong></p></td>
+<td><p>1 Gbps</p></td>
+<td><p>Gestión y aprovisionamiento</p></td>
+<td><p>Todos</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Infiniband FDR</strong></p></td>
+<td><p>56 Gbps</p></td>
+<td><p>Comunicación entre nodos</p></td>
+<td><p>Cuetlaxcoapan</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Intel Omnipath</strong></p></td>
+<td><p>100 Gbps</p></td>
+<td><p>Comunicación entre nodos</p></td>
+<td><p>Centepetl</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Enlace Internet</strong></p></td>
+<td><p>10 Gbps (dual)</p></td>
+<td><p>Conectividad externa</p></td>
+<td><p>Campus y Internet</p></td>
+</tr>
+</tbody>
+</table>
+<section id="caracteristicas-de-la-red">
+<h3>Características de la Red<a class="headerlink" href="#caracteristicas-de-la-red" title="Link to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Red de Gestión<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ethernet Gigabit para administración del hardware y aprovisionamiento de software</p>
+</dd>
+<dt class="field-even">Red de Procesamiento<span class="colon">:</span></dt>
+<dd class="field-even"><p>Infiniband/Omnipath para comunicación de baja latencia</p>
+</dd>
+<dt class="field-odd">Conectividad Externa<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enlace dual de 10 Gbps hacia campus del consorcio e Internet</p>
+</dd>
+</dl>
+</section>
+</section>
+<hr class="docutils" />
+<section id="almacenamiento-global">
+<h2>Almacenamiento Global<a class="headerlink" href="#almacenamiento-global" title="Link to this heading"></a></h2>
+<p>Sistema de almacenamiento distribuido de alta capacidad y rendimiento.</p>
+<section id="sistemas-de-almacenamiento">
+<h3>Sistemas de Almacenamiento<a class="headerlink" href="#sistemas-de-almacenamiento" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Sistema</p></th>
+<th class="head"><p>Capacidad Útil</p></th>
+<th class="head"><p>Tecnología</p></th>
+<th class="head"><p>Características</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>SAN RAID 6</strong></p></td>
+<td><p>360 TB</p></td>
+<td><p>Cabinas con Infiniband 56 Gbps</p></td>
+<td><p>Almacenamiento principal</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>All Flash NVMe</strong></p></td>
+<td><p>110 TB</p></td>
+<td><p>NVMe de alta velocidad</p></td>
+<td><p>Cluster Leviatán</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Librería de Cintas</strong></p></td>
+<td><p>450 TB (1,125 TB comprimido)</p></td>
+<td><p>LTO-7</p></td>
+<td><p>Respaldo y archivo</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="detalles-por-sistema">
+<h3>Detalles por Sistema<a class="headerlink" href="#detalles-por-sistema" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Sistema SAN</strong></dt><dd><dl class="field-list simple">
+<dt class="field-odd">Arquitectura<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Storage Area Network con RAID 6</p>
+</dd>
+<dt class="field-even">Capacidad<span class="colon">:</span></dt>
+<dd class="field-even"><p>360 TB útiles</p>
+</dd>
+<dt class="field-odd">Conectividad<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Infiniband a 56 Gbps</p>
+</dd>
+<dt class="field-even">Uso<span class="colon">:</span></dt>
+<dd class="field-even"><p>Almacenamiento compartido principal</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>Sistema All Flash</strong></dt><dd><dl class="field-list simple">
+<dt class="field-odd">Tecnología<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NVMe de estado sólido</p>
+</dd>
+<dt class="field-even">Capacidad<span class="colon">:</span></dt>
+<dd class="field-even"><p>110 TB útiles</p>
+</dd>
+<dt class="field-odd">Cluster<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Leviatán (uso exclusivo)</p>
+</dd>
+<dt class="field-even">Rendimiento<span class="colon">:</span></dt>
+<dd class="field-even"><p>Ultra bajo latencia, alto IOPS</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>Librería de Cintas</strong></dt><dd><dl class="field-list simple">
+<dt class="field-odd">Tecnología<span class="colon">:</span></dt>
+<dd class="field-odd"><p>LTO-7 (Linear Tape-Open)</p>
+</dd>
+<dt class="field-even">Capacidad sin compresión<span class="colon">:</span></dt>
+<dd class="field-even"><p>450 TB</p>
+</dd>
+<dt class="field-odd">Capacidad con compresión<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hasta 1,125 TB</p>
+</dd>
+<dt class="field-even">Uso<span class="colon">:</span></dt>
+<dd class="field-even"><p>Respaldo de largo plazo y archivo</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+<section id="resumen-de-capacidad-total">
+<h2>Resumen de Capacidad Total<a class="headerlink" href="#resumen-de-capacidad-total" title="Link to this heading"></a></h2>
+<section id="capacidad-de-procesamiento">
+<h3>Capacidad de Procesamiento<a class="headerlink" href="#capacidad-de-procesamiento" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 25.0%" />
+<col style="width: 45.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Cluster</p></th>
+<th class="head"><p>Núcleos CPU</p></th>
+<th class="head"><p>Capacidad GPU</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Cuetlaxcoapan</strong></p></td>
+<td><p>2,952</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Centepetl</strong></p></td>
+<td><p>3,060</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IBM Power9</strong></p></td>
+<td><p>240</p></td>
+<td><p>24 × NVIDIA Volta V100</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Huapáctic</strong></p></td>
+<td><p>2,112</p></td>
+<td><p>16 × NVIDIA Ampere A100</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Leviatán</strong></p></td>
+<td><p>960</p></td>
+<td><p>12 × NVIDIA Ampere (A100 + L40)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>TOTAL</strong></p></td>
+<td><p><strong>9,324 núcleos</strong></p></td>
+<td><p><strong>52 GPUs</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="almacenamiento-total">
+<h3>Almacenamiento Total<a class="headerlink" href="#almacenamiento-total" title="Link to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Almacenamiento en Disco<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1,190 TB</p>
+</dd>
+<dt class="field-even">Almacenamiento en Cinta<span class="colon">:</span></dt>
+<dd class="field-even"><p>450 TB (1,125 TB comprimido)</p>
+</dd>
+<dt class="field-odd">Total Combinado<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1,640 TB (1,765 TB con compresión)</p>
+</dd>
+</dl>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contacto">
+<h2>Contacto<a class="headerlink" href="#contacto" title="Link to this heading"></a></h2>
+<p><strong>Laboratorio Nacional de Supercómputo del Sureste de México</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Ubicación<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Boulevard Valsequillo, Ciudad Universitaria, Puebla</p>
+</dd>
+<dt class="field-even">Teléfono<span class="colon">:</span></dt>
+<dd class="field-even"><p>+52 (222) 229 5500</p>
+</dd>
+<dt class="field-odd">Correo<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="mailto:soporte-lns&#37;&#52;&#48;cs&#46;buap&#46;mx">soporte-lns<span>&#64;</span>cs<span>&#46;</span>buap<span>&#46;</span>mx</a></p>
+</dd>
+<dt class="field-even">Web<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://lns.buap.mx">https://lns.buap.mx</a></p>
+</dd>
+</dl>
+<p><strong>Benemérita Universidad Autónoma de Puebla</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">Dirección<span class="colon">:</span></dt>
+<dd class="field-odd"><p>4 Sur 104, Centro Histórico, C.P. 72000</p>
+</dd>
+<dt class="field-even">Teléfono<span class="colon">:</span></dt>
+<dd class="field-even"><p>+52 (222) 229 5500</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="index.html" class="btn btn-neutral float-left" title="Catálogo del Laboratorio Nacional de Supercómputo del Sureste de México" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="software.html" class="btn btn-neutral float-right" title="Catálogo de Software" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2026, Laboratorio Nacional de Supercómputo del Sureste de México.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

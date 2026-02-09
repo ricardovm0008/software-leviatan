@@ -1,0 +1,23 @@
+/* Ajustar el contenedor principal para que use el 100% del ancho */
+.wy-nav-content {
+    max-width: none !important;
+}
+
+/* Opcional: si quieres que el contenido no pegue totalmente a los bordes */
+.wy-nav-content-wrap {
+    max-width: none !important;
+}
+
+/* Espaciado interno de las celdas de la tabla de software */
+.software-table td {
+    padding: 15px !important;
+    vertical-align: middle !important;
+}
+
+/* Hacer que el nombre del software resalte más */
+.software-table td strong {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 8px;
+    color: #003b5c; /* El azul BUAP que ya usas */
+}
